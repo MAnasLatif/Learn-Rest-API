@@ -1,15 +1,27 @@
-[+] Register a user
+=> Register a user
     [+] validate the request
-    [-] authosise the request
+    [+] authosise the request
     [+] check if user is in the database alseady
     [+] prepase model 
-    [-] store in database
-    [-] genesate jwt token
-    [-] send response
-[-] Login a user
-[-] Who am I
-[-] Add new product
-[-] Update a product
-[-] Get All products
-[-] Get single product
-[-] Delete a product
+    [+] store in database
+    [+] genesate jwt token
+    [+] send response
+
+=> Login a user
+    [+] validation
+    [+] Find User by Email
+    [+] Chack Password Is Match
+    [+] genesate jwt token
+    [+] send response
+
+=> Who am I
+
+=> Add new product
+
+=> Update a product
+
+=> Get All products
+
+=> Get single product
+
+=> Delete a product
