@@ -4,17 +4,36 @@
     [+] check if user is in the database alseady
     [+] prepase model 
     [+] store in database
-    [+] genesate jwt token
+    [+] genesate jwt tokens
     [+] send response
 
 => Login a user
     [+] validation
     [+] Find User by Email
-    [+] Chack Password Is Match
-    [+] genesate jwt token
+    [+] Check Password Is Match
+    [+] genesate jwt tokens
     [+] send response
 
 => Who am I
+    [+] Subtract token to request body
+    [+] varify token
+    [+] Decode
+    [+] varify detail
+    [+] Read User data form database  
+    [+] send response
+
+=> Refresh token
+    [+] varify Refresh token
+    [+] Decode 
+    [+] Check user _id is valite
+    [+] create Access token
+    [+] send
+
+=> Log out
+    [+] varify request
+    [+] varify Refresh token
+    [+] Delete token on database
+    [+] Send response
 
 => Add new product
 
