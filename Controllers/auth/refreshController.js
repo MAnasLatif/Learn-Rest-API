@@ -22,7 +22,7 @@ const refreshController = {
         try {
             refreshtoken = await RefreshToken.findOne({ token: req.body.refresh_token })
             if (!refreshtoken) {
-                return next(new CustomErrorHandler.unAuthorized('Invalid refreh token'))
+                return next(CustomErrorHandler.unAuthorized('Invalid refreh token'))
             }
 
             let userId;
@@ -31,12 +31,12 @@ const refreshController = {
                 userId = _id;
 
             } catch (err) {
-                return next(new CustomErrorHandler.unAuthorized('Invalid refreh token'))
+                return next(CustomErrorHandler.unAuthorized('Invalid refreh token'))
             }
 
             const user = User.findOne({ _id: userId });
             if (!user) {
-                return next(new CustomErrorHandler.unAuthorized('No user fond!'))
+                return next(CustomErrorHandler.unAuthorized('No user fond!'))
             }
 
             // Token
