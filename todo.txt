@@ -38,12 +38,14 @@
 => Add new product
     [+] store img data
     [+] varify request
-    [+] if invalite data then Delete img 
-    [+] create docoment 
+    [+] if invalite data then Delete img
     [+] store docoment 
     [+] send response 
 
 => Update a product
+    [+] varify request
+    [+] store docoment 
+    [+] send response 
 
 => Delete a product
 
