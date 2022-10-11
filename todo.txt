@@ -36,11 +36,17 @@
     [+] Send response
 
 => Add new product
+    [+] store img data
+    [+] varify request
+    [+] if invalite data then Delete img 
+    [+] create docoment 
+    [+] store docoment 
+    [+] send response 
 
 => Update a product
+
+=> Delete a product
 
 => Get All products
 
 => Get single product
-
-=> Delete a product

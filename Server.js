@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import { APP_PORT, DB_URL } from './Config';
 import errorHandler from './middlewares/errorHandler';
 import router from './routers';
+import path from 'path';
 
 // Database connection
 mongoose.connect(DB_URL, {
@@ -19,8 +20,8 @@ db.once('open', () => {
     console.log('DB connected...')
 })
 
-
-
+global.appRoot = path.resolve(__dirname);
+app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
 app.use('/api', router);
