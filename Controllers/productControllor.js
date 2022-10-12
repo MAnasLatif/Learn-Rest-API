@@ -124,12 +124,11 @@ const productController = {
                     return next(CustomErrorHandler.serverError())
                 }
 
-                res.json(document);
+                return res.json(document);
             });
         } catch (err) {
             return next(err)
         }
-
     },
     async index(req, res, next) {
         let documenst;
