@@ -55,6 +55,8 @@
 
 => Get All products
     [+] Search products in database
-    [+] send request
+    [+] send response
 
 => Get single product
+    [+] Search products in database
+    [+] send response

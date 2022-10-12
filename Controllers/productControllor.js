@@ -137,7 +137,17 @@ const productController = {
         // mongoose pagination
 
         try {
-            documenst = await Product.find().select('-updatedAt -__v').sort({_id: -1}); 
+            documenst = await Product.find().select('-updatedAt -__v').sort({ _id: -1 });
+        } catch (err) {
+            return next(CustomErrorHandler.serverError())
+        }
+        return res.json(documenst);
+    },
+    async show(req, res, next) {
+        let documenst;
+
+        try {
+            documenst = await Product.findOne({ _id: req.params.id }).select('-updatedAt -__v');
         } catch (err) {
             return next(CustomErrorHandler.serverError())
         }

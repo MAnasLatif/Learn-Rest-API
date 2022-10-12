@@ -14,6 +14,6 @@ const productSchema = new Schema({
         }
     },
 
-}, { timestamps: true, toJSON: { getters: true } });
+}, { timestamps: true, toJSON: { getters: true } , id : false});
 
 export default mongoose.model('Product', productSchema)
