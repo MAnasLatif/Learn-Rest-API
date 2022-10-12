@@ -25,6 +25,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
 app.use('/api', router);
+app.use('/uploads', express.static('uploads'));
 
 app.use(errorHandler);
 
