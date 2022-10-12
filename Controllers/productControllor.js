@@ -98,7 +98,7 @@ const productController = {
                     price,
                     size,
                     ...(req.file && { image: filePath })
-                },{new: true});
+                }, { new: true });
 
             } catch (err) {
                 return next(err)
@@ -106,6 +106,30 @@ const productController = {
 
             res.status(201).json(document)
         });
+    },
+
+    async destroy(req, res, next) {
+        try {
+            const document = await Product.findOneAndRemove({ _id: req.params.id });
+            if (!document) {
+                return next(new Error('Nothing to Delete'))
+            }
+
+            // delete img 
+
+            const imagePath = document._doc.img
+
+            fs.unlink(`${appRoot}/${imagePath}`, (err) => {
+                if (err) {
+                    return next(CustomErrorHandler.serverError())
+                }
+
+                res.json(document);
+            });
+        } catch (err) {
+            return next(err)
+        }
+
     }
 }
 

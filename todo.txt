@@ -48,7 +48,12 @@
     [+] send response 
 
 => Delete a product
+    [+] varify request
+    [+] Search product in database
+    [+] Delete from database
+    [+] Delete it img
 
 => Get All products
+
 
 => Get single product
