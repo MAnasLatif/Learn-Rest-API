@@ -54,6 +54,7 @@
     [+] Delete it img
 
 => Get All products
-
+    [+] Search products in database
+    [+] send request
 
 => Get single product

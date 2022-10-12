@@ -130,6 +130,18 @@ const productController = {
             return next(err)
         }
 
+    },
+    async index(req, res, next) {
+        let documenst;
+        // pagination 
+        // mongoose pagination
+
+        try {
+            documenst = await Product.find().select('-updatedAt -__v').sort({_id: -1}); 
+        } catch (err) {
+            return next(CustomErrorHandler.serverError())
+        }
+        return res.json(documenst);
     }
 }
 
